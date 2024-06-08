@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css" />
+    <link rel="stylesheet" href="Timer.css" />
+    <link rel="stylesheet" href="Initiative.css" />
+    <link rel="stylesheet" href="Weather.css" />
+    <title>Game Screen</title>
+  </head>
+<body>
+  <div class="background-image">
+  <table>
+    <tr>
+      <td valign="top">
+        <div class="widget">
+		<table>
+			<tr>
+				<td align="center" valign="top">
+					<img src="player1.png" class="characterPortrait" id="imagePreview">
+					<input type="text" id="player1name" placeholder="Player 1">
+					<input type="checkbox" id="player1" name="player1" value="Player 1" onclick="toggleSubmitButton()">
+					<label for="player1"> Add to Initiative</label>
+				</td>
+				<td align="center" valign="top">
+					<img src="player2.png" class="characterPortrait">
+					<input type="text" id="player2name" placeholder="Player 2">
+					<input type="checkbox" id="player2" name="player2" value="Player 2" onclick="toggleSubmitButton()">
+					<label for="player2"> Add to Initiative</label>
+				</td>
+				<td align="center" valign="top">
+					<img src="player3.png" class="characterPortrait">
+					<input type="text" id="player3name" placeholder="Player 3">
+					<input type="checkbox" id="player3" name="player3" value="Player 3" onclick="toggleSubmitButton()">
+					<label for="player3"> Add to Initiative</label>
+				</td>
+				<td align="center" valign="top">
+					<img src="player4.png" class="characterPortrait">
+					<input type="text" id="player4name" placeholder="Player 4">
+					<input type="checkbox" id="player4" name="player4" value="Player 4" onclick="toggleSubmitButton()">
+					<label for="player4"> Add to Initiative</label>
+				</td>
+				<td align="center" valign="top">
+					<img src="player5.png" class="characterPortrait">
+					<input type="text" id="player5name" placeholder="Player 5">
+					<input type="checkbox" id="player5" name="player5" value="Player 5" onclick="toggleSubmitButton()">
+					<label for="player5"> Add to Initiative</label><br>
+					<input type="submit" id="addPlayer" value="Add to Initiative" disabled>
+				</td>
+			</tr>
+		</table>
+  	</div>
+	  </td>
+      <td rowspan="2" valign="top">
+		<div class="widget" style="height: 95vh;">
+			<div class="screenlabel">Initiative Tracker</div>
+        <div id="initiativeTracker">
+          <div id="playerControls">
+              <!-- Player Add Buttons -->
+			  <input type="text" id="monsterNameInput" placeholder="Monster/NPC Name">
+              <button id="addMonster">Add Monster</button>
+              <button id="addNPC">Add NPC</button>
+          </div>
+          <ul class="custom-list" id="initiativeList"></ul>
+          <div id="navigationControls">
+              <button id="previous">Previous</button>
+              <button id="next">Next</button>
+              <button id="clearList">Clear List</button>
+              <div id="roundCounter">Round: 1</div>
+          </div>
+      </div>
+      </div></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">
+		<table>
+			<tr>
+			  <td><div class="widget">
+				<div id="timeDisplay" >
+					<table width="100%">
+						<tr>
+							<td class="screenlabel">Month:</td>
+							<td class="screenlabel">Week:</td>
+							<td class="screenlabel">Day:</td>
+						</tr>
+						<tr>
+							<td >
+								<table>
+									<tr>
+										<td>
+											<span class="up-down-container">
+											<div class="up-button" onclick="increment('month'); changeWeather();">&#9650;</div>
+											<div class="down-button" onclick="decrement('month'); changeWeather();">&#9660;</div>
+											</span>
+										</td>
+										<td>
+											<span id="month"></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td >
+								<table>
+									<tr>
+										<td>
+											<span class="up-down-container">
+											<div class="up-button" onclick="increment('week'); changeWeather();">&#9650;</div>
+											<div class="down-button" onclick="decrement('week'); changeWeather();">&#9660;</div>
+											</span>
+										</td>
+										<td>
+											<span id="week"></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td >
+								<table>
+									<tr>
+										<td>
+											<span class="up-down-container">
+											<div class="up-button" onclick="increment('day'); changeWeather();">&#9650;</div>
+											<div class="down-button" onclick="decrement('day'); changeWeather();">&#9660;</div>
+											</span>
+										</td>
+										<td>
+											<span id="day"></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+            			</tr>
+					<tr colspan="3">
+						<td class="screenlabel">Time:</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="width: auto;">
+								<tr>
+									<td>
+										<span class="up-down-container">
+										<div class="up-button" onclick="increment('hour')">&#9650;</div>
+										<div class="down-button" onclick="decrement('hour')">&#9660;</div>
+										</span>
+									</td>
+									<td>
+										<span id="hour" class="clockLabel"></span> :
+									</td>
+									
+									<td>
+										<span class="up-down-container">
+										<div class="up-button" onclick="increment('minute')">&#9650;</div>
+										<div class="down-button" onclick="decrement('minute')">&#9660;</div>
+										</span>
+									</td>
+									<td>
+										<span id="minute" class="clockLabel"></span> :
+									</td>
+									
+									<td>
+										<span class="up-down-container">
+										<div class="up-button" onclick="increment('second')">&#9650;</div>
+										<div class="down-button" onclick="decrement('second')">&#9660;</div>
+										</span>
+									</td>
+									<td>
+										<span id="second" class="clockLabel"></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				</div>
+				<button onclick="pauseUnpause()">Pause/Unpause</button>
+				<button onclick="startNewDay()">Start New Day</button>
+				<button onclick="longRest()">Long Rest</button>
+				<button onclick="addTen()">Add Ten Minutes</button>
+			</div>
+			</td>
+			<td width="50%"valign="top">
+				<div class="widget">
+				<div  class="screenlabel">Weather (Season: <span id="season"></span>)</div>
+				<div id="seasonDisplay">
+					<table>
+						<tr>
+							<td width="100px"><img id="weatherImage" src="" alt="Weather Image"></td>
+							<td><span id="todaysWeather"></span></td>
+						</tr>
+					</table>
+				  </div>
+				  <div>
+					<label for="climateRegion">Climate Region:</label>
+					<select id="climateRegion">
+					  <option value="tropical">Tropical</option>
+					  <option value="arid">Arid</option>
+					  <option value="temperate">Temperate</option>
+					  <option value="continental">Continental</option>
+					  <option value="polar">Polar</option>
+					</select>
+				  </div>
+			</div>
+		</td>
+		</tr>
+	</table>
+	</td>
+    </tr>
+  </table>
+  </div>
+</body>
+<script src="Timer.js"></script>
+<script src="Initiative.js"></script>
+<script src="Weather.js"></script>
+<script>
+    window.onload = function() {
+      changeWeather();
+    };
+
+    document.getElementById("climateRegion").addEventListener("change", function() {
+      changeWeather();
+    });
+  </script>
+</html>
