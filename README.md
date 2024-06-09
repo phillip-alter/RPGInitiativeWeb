@@ -77,3 +77,4 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 * Ability to add multiple status effects
 * +/- from round tracker
 * Select specific character in initiative
+* Important/relevant values for creatures in initiative
