@@ -28,8 +28,24 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 3. Multiple monsters can be added by continuing to click the "Add Monster" button. The site will append their names with numbers.
 
 #### For NPCs
-1. As monsters, but click the "Add NPC" button instead.
+* As monsters, but click the "Add NPC" button instead.
 
+#### Removing from Initiative
+* Click the minus ('-') button next to a character's initiative value to remove them from the list.
+
+#### Tracking Character Turns
+* Click the "Next" or "Previous" button to move forward or backwards in initiative. Current turn is highlighted.
+* When the bottom is reached, the top character will be highlighted and the round tracker will increase by one.
+
+#### Resetting Everything
+* Clicking "Clear List" will clear the list of all creatures and reset the Round counter to 1. 
+
+#### Reordering
+*  Click and drag to reorder characters based on their rolled inititative.
+
+#### Death/Status Effects
+* To kill a character, click the skull & crossbones next to their name.
+* Status effects can be selected under the dropdown menu.
 
 ### Time
 * Time can be paused, unpaused, added to, subtracted from, etc using the up and down arrows next to their specific area.
@@ -57,4 +73,7 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 * Add ability to change background
 * Possibly add a music player? Or soundboard player?
 * Add/remove dates/time from date/clock
-
+* Automatic reordering based on their initiative #'s
+* Ability to add multiple status effects
+* +/- from round tracker
+* Select specific character in initiative
