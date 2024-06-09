@@ -65,7 +65,7 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 ## Theoretical roadmap, in no particular order:
 
 * Add ability to change calendars to other popular settings, or add ability to make custom calendar
-* Reorganize and change the HTML so I can feel less bad about using someone else's code
+* Reorganize and change the HTML so I can feel less bad about having to use someone else's code
 * Ability to change character portraits and have them save
 * Save names
 * Rudimentary character sheets (for DM tracking purposes)
