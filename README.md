@@ -33,6 +33,9 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 
 ### Time
 * Time can be paused, unpaused, added to, subtracted from, etc using the up and down arrows next to their specific area.
+  * Long Rest: Adds 8 hours to the clock.
+  * Start New Day: Sets the clock to midnight of a new day.
+  * Add 10 Minutes: Usually used in dungeons to track how long the players have been muckin' about.
 
 ### Weather
 * Weather will update randomly every:
@@ -45,6 +48,7 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 
 ## Theoretical roadmap, in no particular order:
 
+* Add ability to change calendars to other popular settings, or add ability to make custom calendar
 * Reorganize and change the HTML so I can feel less bad about using someone else's code
 * Ability to change character portraits and have them save
 * Save names
