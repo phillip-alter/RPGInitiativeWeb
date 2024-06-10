@@ -1,9 +1,4 @@
-
-#seasonDisplay {
-    
-  }
-  
-  #weatherImage {
-    max-width: 75px;
-    max-height: 75px;
-  }
+#weatherImage {
+  max-width: 75px;
+  max-height: 75px;
+}

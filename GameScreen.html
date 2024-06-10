@@ -13,51 +13,14 @@
   <div class="background-image">
   <table>
     <tr>
-      <td valign="top">
-        <div class="widget">
-		<table>
-			<tr>
-				<td align="center" valign="top">
-					<img src="player1.png" class="characterPortrait" id="imagePreview">
-					<input type="text" id="player1name" placeholder="Player 1">
-					<input type="checkbox" id="player1" name="player1" value="Player 1" onclick="toggleSubmitButton()">
-					<label for="player1"> Add to Initiative</label>
-				</td>
-				<td align="center" valign="top">
-					<img src="player2.png" class="characterPortrait">
-					<input type="text" id="player2name" placeholder="Player 2">
-					<input type="checkbox" id="player2" name="player2" value="Player 2" onclick="toggleSubmitButton()">
-					<label for="player2"> Add to Initiative</label>
-				</td>
-				<td align="center" valign="top">
-					<img src="player3.png" class="characterPortrait">
-					<input type="text" id="player3name" placeholder="Player 3">
-					<input type="checkbox" id="player3" name="player3" value="Player 3" onclick="toggleSubmitButton()">
-					<label for="player3"> Add to Initiative</label>
-				</td>
-				<td align="center" valign="top">
-					<img src="player4.png" class="characterPortrait">
-					<input type="text" id="player4name" placeholder="Player 4">
-					<input type="checkbox" id="player4" name="player4" value="Player 4" onclick="toggleSubmitButton()">
-					<label for="player4"> Add to Initiative</label>
-				</td>
-				<td align="center" valign="top">
-					<img src="player5.png" class="characterPortrait">
-					<input type="text" id="player5name" placeholder="Player 5">
-					<input type="checkbox" id="player5" name="player5" value="Player 5" onclick="toggleSubmitButton()">
-					<label for="player5"> Add to Initiative</label><br>
-					<input type="submit" id="addPlayer" value="Add to Initiative" disabled>
-				</td>
-			</tr>
-		</table>
-  	</div>
-	  </td>
       <td rowspan="2" valign="top">
 		<div class="widget" style="height: 95vh;">
 			<div class="screenlabel">Initiative Tracker</div>
         <div id="initiativeTracker">
           <div id="playerControls">
               <!-- Player Add Buttons -->
+			  <input type="text" id="playerNameInput" placeholder="Player Name">
+			  <button id="addPlayer">Add Player</button><br>
 			  <input type="text" id="monsterNameInput" placeholder="Monster/NPC Name">
               <button id="addMonster">Add Monster</button>
               <button id="addNPC">Add NPC</button>
@@ -155,17 +118,7 @@
 										</span>
 									</td>
 									<td>
-										<span id="minute" class="clockLabel"></span> :
-									</td>
-									
-									<td>
-										<span class="up-down-container">
-										<div class="up-button" onclick="increment('second')">&#9650;</div>
-										<div class="down-button" onclick="decrement('second')">&#9660;</div>
-										</span>
-									</td>
-									<td>
-										<span id="second" class="clockLabel"></span>
+										<span id="minute" class="clockLabel"></span> 
 									</td>
 								</tr>
 							</table>
@@ -173,7 +126,6 @@
 					</tr>
 				</table>
 				</div>
-				<button onclick="pauseUnpause()">Pause/Unpause</button>
 				<button onclick="startNewDay()">Start New Day</button>
 				<button onclick="longRest()">Long Rest</button>
 				<button onclick="addTen()">Add Ten Minutes</button>
