@@ -4,7 +4,6 @@ let time = {
     day: 1,
     hour: 0,
     minute: 0,
-    second: 0
   };
 
 
@@ -22,7 +21,6 @@ let time = {
     document.getElementById('day').textContent = `${time.day}`;
     document.getElementById('hour').textContent = `${String(time.hour).padStart(2,'0')}`;
     document.getElementById('minute').textContent = `${String(time.minute).padStart(2,'0')}`;
-    document.getElementById('second').textContent = `${String(time.second).padStart(2,'0')}`;
   }
 
   function getMonthName(month) {
@@ -64,10 +62,6 @@ let time = {
       time[unit] %= 60;
       increment('hour');
     }
-    else if (unit === 'second' && time[unit] > 59) {
-      time[unit] %= 60;
-      increment('minute');
-    }
   }
 
   function decrement(unit) {
@@ -98,28 +92,11 @@ let time = {
         time[unit] = 59;
         decrement('hour');
       }
-      else if (unit === 'second') {
-        time[unit] = 59;
-        decrement('minute');
-      }
     }
   }
 
-  let intervalId;
-  let isPaused = false;
-
-  function pauseUnpause() {
-    if (isPaused) {
-      intervalId = setInterval(updateTime, 1000);
-      isPaused = false;
-    } else {
-      clearInterval(intervalId);
-      isPaused = true;
-    }
-  }
 
   function updateTime() {
-    increment('second');
     updateDisplay();
     saveTime();
   }
@@ -127,7 +104,6 @@ let time = {
   function startNewDay() {
     time.hour = 0;
     time.minute = 0;
-    time.second = 0;
     increment('day');
     updateDisplay();
     saveTime();
@@ -150,5 +126,4 @@ let time = {
   function saveTime() {
     localStorage.setItem('savedTime', JSON.stringify(time));
   }
-
-  intervalId = setInterval(updateTime, 1000);
+  
