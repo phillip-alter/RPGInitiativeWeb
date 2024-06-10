@@ -1,10 +1,10 @@
-## Disclaimer
+## Ship of Theseus Disclaimer
 
 I am not the original author of this web application. The original software can be found here:
 
 https://github.com/mlbryant25701/D-DScreen
 
-However, I have decided to create it under a new GitHub repo because I have modified most of the javascript code to fix errors, make it more efficient, and make it more readable. 
+However, I have decided to create it under a new GitHub repo because I have modified most of the javascript code to fix errors, make it more efficient, and make it more readable. When does an application stop being a fork and start being its own repo? 
 
 mlbryant25701 is the original mastermind behind this; if you want to thank anyone, thank him.
 
