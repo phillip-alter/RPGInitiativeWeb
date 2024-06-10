@@ -1,12 +1,7 @@
-function toggleSubmitButton(){
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const submitButton = document.getElementById('addPlayer');
-    submitButton.disabled = !Array.from(checkboxes).some(checkbox => checkbox.checked);
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     let roundCounter = 1;
     let currentPlayerIndex = -1;
+    let playerCounter = 1;
     let monsterCounter = 1;
     let npcCounter = 1;
     const playersAdded = new Set();
@@ -105,18 +100,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
-    document.getElementById("addPlayer").onclick = (e) => {
-        e.preventDefault();
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            if (checkbox.checked) {
-                const playerName = checkbox.previousElementSibling.value;
-                if (playerName && !playersAdded.has(playerName)) {
-                    addItem(playerName, `player-${playerName}`);
-                    playersAdded.add(playerName);
-                }
-            }
-        });
+    document.getElementById("addPlayer").onclick = () => {
+        const enteredPlayerName = document.getElementById("playerNameInput").value;
+        if (enteredPlayerName == ``){
+            addItem(`Player ${playerCounter}`,`player-${playerCounter}`);
+            playerCounter++;
+        }
+        else {
+            addItem(enteredPlayerName, `monster-${playerCounter}`);
+        }
+        playerNameInput.value = "";
     };
 
     document.getElementById("addMonster").onclick = () => {
