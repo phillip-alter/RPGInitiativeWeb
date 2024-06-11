@@ -1,10 +1,10 @@
-## Disclaimer
+## Ship of Theseus Disclaimer
 
 I am not the original author of this web application. The original software can be found here:
 
 https://github.com/mlbryant25701/D-DScreen
 
-However, I have decided to create it under a new GitHub repo because I have modified most of the javascript code to fix errors, make it more efficient, and make it more readable. 
+However, I have decided to create it under a new GitHub repo because I have modified most of the javascript code to fix errors, make it more efficient, and make it more readable. When does an application stop being a fork and start being its own repo? 
 
 mlbryant25701 is the original mastermind behind this; if you want to thank anyone, thank him.
 
@@ -19,8 +19,7 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 #### Adding Players
 
 1. Type in a player's character name (or their actual name)
-2. Click checkbox below their name
-3. Click the "Add to Initiative" button
+3. Click the "Add Players" button
 
 #### For Monsters
 1. (Optional) Type in a monster's name.
@@ -48,7 +47,7 @@ mlbryant25701 is the original mastermind behind this; if you want to thank anyon
 * Status effects can be selected under the dropdown menu.
 
 ### Time
-* Time can be paused, unpaused, added to, subtracted from, etc using the up and down arrows next to their specific area.
+* Time can be added to, subtracted from, etc using the up and down arrows next to their specific area.
   * Long Rest: Adds 8 hours to the clock.
   * Start New Day: Sets the clock to midnight of a new day.
   * Add 10 Minutes: Usually used in dungeons to track how long the players have been muckin' about.
