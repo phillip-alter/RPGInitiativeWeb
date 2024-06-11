@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         const conditionMenu = document.createElement("select");
         conditionMenu.innerHTML = `
-        <option value="normal"> </option>
+        <option value="normal"> </option> 
         <option value="blinded">Blinded</option>
         <option value="charmed">Charmed</option>
         <option value="deafened">Deafened</option>
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <option value="incapacitated">Incapacitated</option>
         <option value="invisible">Invisible</option>
         <option value="paralyzed">Paralyzed</option>
-        <option value="petrified">Petrifie d</option>
+        <option value="petrified">Petrified</option>
         <option value="poisoned">Poisoned</option>
         <option value="prone">Prone</option>
         <option value="restrained">Restrained</option>

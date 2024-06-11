@@ -84,10 +84,6 @@
   }
 
   function calculateChanceOfPrecipitation(climateRegion, season) {
-    // Add your logic here to calculate the chance of precipitation based on the region and season
-    // For example, you could use a lookup table or an algorithm to determine the chance
-    // Return the calculated chance as a decimal (e.g., 0.3 for 30% chance)
-
         let percipitationChance;
       
         switch (climateRegion) {
@@ -173,7 +169,7 @@
             break;
         }
 
-    return percipitationChance; // Placeholder value, replace with your actual calculation
+    return percipitationChance;
   }
   
   function isPrecipitation(weather) {
