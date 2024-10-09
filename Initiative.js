@@ -36,11 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = event.dataTransfer.getData("text");
         const droppedItem = document.getElementById(data);
         const dropTarget = event.target.closest('li');
-        if (dropTarget && dropTarget !== droppedItem) {
+        if (dropTarget !== droppedItem) {
             initiativeList.insertBefore(droppedItem, dropTarget);
             
         }
     };
+
 
     function addItem(name, id, isDead = false) {
         const li = document.createElement("li");
@@ -51,6 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
         initLabel.style.fontFamily = "Arial";
         initLabel.style.fontSize = "12px";
         const initValue = document.createElement("input");
+        initValue.type = "number";
+        initValue.value = "10";
+        initValue.min = 0;
+        initValue.max = 99;
+        initValue.style.width = "30px";
+        const initACLabel = document.createElement("label");
+        initLabel.textContent = "AC: ";
+        initLabel.style.fontFamily = "Arial";
+        initLabel.style.fontSize = "12px";
+        const initACValue = document.createElement("input");
         initValue.type = "number";
         initValue.value = "10";
         initValue.min = 0;
